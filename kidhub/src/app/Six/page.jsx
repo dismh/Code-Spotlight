@@ -8,164 +8,33 @@ export default function Home() {
   const [hideCode, sethideCode] = useState(false);
 
   const iframeUrl =
-    "https://dismh.github.io/code-spotlight-pages/maninder/maninder.html";
+    "https://dismh.github.io/code-spotlight-pages/six/new.html";
   const code = `<html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>My Friends & School Days - Class 10</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      background: #f0f8ff;
-      color: #333;
-    }
-
-    header {
-      background: #3b82f6;
-      color: white;
-      padding: 20px 10px;
-      text-align: center;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 2.5em;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .section-title {
-      font-size: 1.8em;
-      margin-top: 40px;
-      color: #1e3a8a;
-      border-bottom: 2px solid #3b82f6;
-      padding-bottom: 5px;
-    }
-
-    .cards {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 20px;
-    }
-
-    .card {
-      background: white;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      padding: 20px;
-      border-radius: 10px;
-      flex: 1 1 200px;
-      transition: transform 0.2s;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-    }
-
-    .card h3 {
-      margin-top: 0;
-      color: #2563eb;
-    }
-
-    .school-days {
-      background: #e0f2fe;
-      padding: 20px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-
-    footer {
-      background: #3b82f6;
-      color: white;
-      text-align: center;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-      .cards {
-        flex-direction: column;
-      }
-    }
-  </style>
+<title> My IT Club Partner/Friend </title>
 </head>
-<body>
-
-  <header>
-    <h1>My Friends' Favourite Sports & My School Days</h1>
-    <p>2025 My School Life | Created by [Dev,Ajeet And Maninder] | Class 10
-</p>
-  </header>
-
-  
-
+<body bgcolor="Green">
+<marquee><h1><b> About Mehtab </b></h1></marquee>
+<h2><i> Mehtab studies in class 8B and loves to play cricket. He is good in Mapology and Geography. </i></h2>
+<h3> He also likes watching others sports like football, etc. He is waiting for FIFA world cup 2026.</h3>
+<h4> He supports RCB and PBKS in IPL</h4>
+<h5> We both study in same  school </h5>
+<h6> He is also good in studies because he gets 85%. He is now aiming for 90% above. </h6>
+<img src="rcb.jpg">
+<img src="download.png">
+<a href="old.html">click here </a>
 </body>
 </html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Friends' Sports - Class 10 Project</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-
-<div class="container">
-    <div class="cards">
-    <div class="card">
-      <h3>Devkrit</h3>
-      <p>Loves playing <strong>Cricket</strong>. He dreams of becoming a professional cricketer someday!</p>
-    </div>
-    <div class="card">
-      <h3>Maninder</h3>
-      <p>His favourite sport is <strong>Badminton</strong>.He plays at the district level.</p>
-    </div>
-    <div class="card">
-      <h3>prithvi</h3>
-      <p>Passionate about <strong>chess</strong>. He is our school team captain.</p>
-    </div>
-    <div class="card">
-      <h3>Aryash</h3>
-      <p>Enjoys <strong>Table Tennis</strong> and has won several medals in inter-school competitions.</p>
-    </div>
-  </div>
-</div>
- <div>
-      <h2 class="section-title">My School Days</h2>
-      <div class="school-days">
-        <p>My school days are the most memorable part of my life. I have made many amazing friends and have learned valuable lessons from our wonderful teachers.</p>
-        <p>Every day is full of fun, laughter, and learning. I enjoy participating in school events, playing sports, and spending time in the library. I will always cherish the time spent in our school corridors, classrooms, and playgrounds.</p>
-        <p>These moments will remain in my heart forever.</p>
-      </div>
-    </div>
-</div>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Friends' Sports - Class 10 Project</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-</html>
-
 `;
 
   return (
     <>
       <main className="min-h-screen bg-black text-white px-4 py-5 flex flex-col items-center mt-20">
         <h1 className="text-4xl font-extrabold mt-5 mb-3 tracking-tight">
-          🎓 School Days and Favourite Sports
+          Mehtab's  Website
         </h1>
         <p className="text-gray-400 mb-8 text-lg">
-          A glimpse into the school days of students
+          Mehtab's  own creation.
         </p>
 
         <div className="w-full max-w-6xl border border-gray-800 rounded-xl overflow-hidden relative bg-[#0e0e0e] shadow-lg">
@@ -264,7 +133,7 @@ export default function Home() {
             <span className="text-sm text-gray-400">
               by{" "}
               <strong className="text-white">
-                Devkrit, Ajeet and Maninder
+                Mehtab
               </strong>
             </span>
             <a

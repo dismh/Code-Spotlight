@@ -56,14 +56,38 @@ export default function Home() {
                   title="Devkrit, Maninder and Ajeet"
                   description="A student website showcasing school days and favourite sports."
                   link="\devkrit"
-                  img="/assets/devkrit.png"
+                  img="/assets/dev.png"
                   linkName="View"
                 />
                 <AnimatedPinCard
-                  title="DeCram AI"
-                  description="DeCram AI is an AI-powered student platform"
-                  link="https://www.decram.me"
-                  img="/assets/Decram.jpg"
+                  title="Ayush"
+                  description="Project about school life and favourite sports."
+                  link="\Five"
+                  img="/assets/ay.png"
+                />
+                 <AnimatedPinCard
+                  title="Varnav"
+                  description="Project about school life."
+                  link="\Three"
+                  img="/assets/three.png"
+                />
+                <AnimatedPinCard
+                  title="Dhruv & Sameer"
+                  description="Project about each  other's interests and hobbies."
+                  link="\Seven"
+                  img="/assets/seven.png"
+                />
+                <AnimatedPinCard
+                  title="Mehtab"
+                  description="Project about himself."
+                  link="\Six"
+                  img="/assets/seix.png"
+                />
+                <AnimatedPinCard
+                  title="Aarnav"
+                  description="Project about his school hobbies."
+                  link="\Aarnav"
+                  img="/assets/Aar.png"
                 />
               </div>
             </div>
