@@ -98,7 +98,7 @@ export default function FloatingDockDemo() {
       href: "#Footer",
     },
   ];
-
+  // hello
   return (
     <div
       className="flex items-center justify-center w-full fixed z-[10000]"
