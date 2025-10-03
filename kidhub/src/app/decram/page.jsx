@@ -32,8 +32,7 @@ export default function Home() {
 
   return (
     <>
-      
-      {/* <Navbar /> */}
+      {/* < /> */}
       <main className="min-h-screen bg-black text-white px-4 py-5 flex flex-col items-center mt-20">
         <h1 className="text-4xl font-extrabold mt-5 mb-3 tracking-tight">
           🎓 DeCram AI

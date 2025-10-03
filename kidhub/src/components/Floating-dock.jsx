@@ -56,6 +56,7 @@ const FloatingDockMobile = ({ items, className }) => {
                 <a
                   href={item.href}
                   key={item.title}
+                  onClick={item.onClick}
                   className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
                 >
                   <div className="h-4 w-4">{item.icon}</div>
@@ -93,7 +94,7 @@ const FloatingDockDesktop = ({ items, className }) => {
   );
 };
 
-function IconContainer({ mouseX, title, icon, href }) {
+function IconContainer({ mouseX, title, icon, href, onClick }) {
   let ref = useRef(null);
 
   let distance = useTransform(mouseX, (val) => {
@@ -137,7 +138,7 @@ function IconContainer({ mouseX, title, icon, href }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-    <a href={href}>
+    <a href={href} onClick={onClick}>
       <motion.div
         ref={ref}
         style={{ width, height }}
