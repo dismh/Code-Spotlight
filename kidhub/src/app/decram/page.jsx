@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CodeBlock } from "@/components/CodeBlock";
-
+import { Navbar } from "@/components/Navbar";
 
 export default function Home() {
   const [tab, setTab] = useState("preview");
@@ -32,13 +32,14 @@ export default function Home() {
 
   return (
     <>
-      <Navbar />
+      
+      {/* <Navbar /> */}
       <main className="min-h-screen bg-black text-white px-4 py-5 flex flex-col items-center mt-20">
         <h1 className="text-4xl font-extrabold mt-5 mb-3 tracking-tight">
           🎓 DeCram AI
         </h1>
         <p className="text-gray-400 mb-8 text-lg">
-         An innovation of Dexibility Productions.
+          An innovation of Dexibility Productions.
         </p>
 
         <div className="w-full max-w-6xl border border-gray-800 rounded-xl overflow-hidden relative bg-[#0e0e0e] shadow-lg">

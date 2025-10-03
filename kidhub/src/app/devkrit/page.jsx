@@ -3,12 +3,12 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { CodeBlock } from "@/components/CodeBlock";
 
-
 export default function Home() {
   const [tab, setTab] = useState("preview");
   const [hideCode, sethideCode] = useState(false);
 
-  const iframeUrl = "https://dismh.github.io/code-spotlight-pages/maninder/maninder.html";
+  const iframeUrl =
+    "https://dismh.github.io/code-spotlight-pages/maninder/maninder.html";
   const code = `<!DOCTYPE html>
 <html>
 <head>
@@ -55,7 +55,6 @@ export default function Home() {
 
   return (
     <>
-
       <main className="min-h-screen bg-black text-white px-4 py-5 flex flex-col items-center mt-20">
         <h1 className="text-4xl font-extrabold mt-5 mb-3 tracking-tight">
           🎓 School Days and Favourite Sports
@@ -71,10 +70,11 @@ export default function Home() {
               <button
                 key={id}
                 onClick={() => setTab(id)}
-                className={`w-1/2 py-3 text-sm font-medium transition-colors ${tab === id
+                className={`w-1/2 py-3 text-sm font-medium transition-colors ${
+                  tab === id
                     ? "text-white border-b-2 border-sky-500 bg-[#1a1a1a]"
                     : "text-gray-400 hover:text-white hover:bg-[#1a1a1a]"
-                  }`}
+                }`}
               >
                 {id.charAt(0).toUpperCase() + id.slice(1)}
               </button>
@@ -157,7 +157,10 @@ export default function Home() {
           {/* Footer */}
           <div className="p-4 flex justify-between items-center bg-[#121212] border-t border-gray-800">
             <span className="text-sm text-gray-400">
-              by <strong className="text-white">Devkrit, Ajeet and Maninder</strong>
+              by{" "}
+              <strong className="text-white">
+                Devkrit, Ajeet and Maninder
+              </strong>
             </span>
             <a
               href={iframeUrl}

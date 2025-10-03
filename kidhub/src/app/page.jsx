@@ -36,7 +36,10 @@ export default function Home() {
           <>
             <ThreeDMarqueeDemoSecond />
             <Navbar />
-            <div id="Websites" className="min-h-screen px-4 py-5 bg-black text-white">
+            <div
+              id="Websites"
+              className="min-h-screen px-4 py-5 bg-black text-white"
+            >
               <h1 className="text-5xl font-bold mb-8 text-center">
                 <a href="#Websites">Our Projects</a>
               </h1>
@@ -50,10 +53,11 @@ export default function Home() {
                   linkName="View"
                 />
                 <AnimatedPinCard
-                  title="DeCram AI"
-                  description="DeCram AI is an AI-powered student platform"
-                  link="https://www.decram.me"
-                  img="/assets/Decram.jpg"
+                  title="Devkrit, Maninder and Ajeet"
+                  description="A student website showcasing school days and favourite sports."
+                  link="\devkrit"
+                  img="/assets/devkrit.png"
+                  linkName="View"
                 />
                 <AnimatedPinCard
                   title="DeCram AI"
@@ -63,7 +67,10 @@ export default function Home() {
                 />
               </div>
             </div>
-            <div id="Contributors" className="w-full flex items-start justify-center pt-2 pb-10 relative overflow-hidden bg-black">
+            <div
+              id="Contributors"
+              className="w-full flex items-start justify-center pt-2 pb-10 relative overflow-hidden bg-black"
+            >
               <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
                 Our resourceful
                 <ColourfulText text=" Contributors" /> <br />
@@ -71,7 +78,10 @@ export default function Home() {
             </div>
             <DraggableCardDemo />
             <HighlightPage />
-            <footer id="Footer" className="bg-black text-white py-8 text-center">
+            <footer
+              id="Footer"
+              className="bg-black text-white py-8 text-center"
+            >
               <p>Developed with ❤️ by Dexibility Productions</p>
             </footer>
           </>
