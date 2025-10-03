@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation"; // 👈 import router
 
@@ -71,9 +71,19 @@ export const ThreeDMarquee = ({ images, className }) => {
 const useOpenRandom = () => {
   const router = useRouter();
   return () => {
-    const projects = ["/decram"];
+    // list of project routes available on the index
+    const projects = [
+      "/decram",
+      "/devkrit",
+      "/Five",
+      "/Three",
+      "/Seven",
+      "/Six",
+      "/Aarnav",
+    ];
+
     const randomPath = projects[Math.floor(Math.random() * projects.length)];
-    router.push(randomPath); // 👈 navigates
+    router.push(randomPath); // navigate to a random route
   };
 };
 

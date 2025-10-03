@@ -19,7 +19,16 @@ export default function FloatingDockDemo() {
 
   const useOpenRandom = () => {
     return () => {
-      const projects = ["/decram"];
+      const projects = [
+        "/decram",
+        "/devkrit",
+        "/Five",
+        "/Three",
+        "/Seven",
+        "/Six",
+        "/Aarnav",
+      ];
+
       const randomPath = projects[Math.floor(Math.random() * projects.length)];
       router.push(randomPath); // Navigate to random project
     };
@@ -81,20 +90,10 @@ export default function FloatingDockDemo() {
           alt="Aceternity Logo"
         />
       ),
-      // 🚀 instead of href, we give it an onClick
-      onClick: () => {
-        const projects = [
-          "/decram",
-          "/devkrit",
-          "/Five",
-          "/Three",
-          "/Seven",
-          "/Six",
-          "/Aarnav",
-        ];
-        const randomPath =
-          projects[Math.floor(Math.random() * projects.length)];
-        router.push(randomPath);
+      asButton: true,
+      onClick: (e) => {
+        e.preventDefault?.();
+        openRandom();
       },
     },
     {
@@ -115,7 +114,7 @@ export default function FloatingDockDemo() {
 
   return (
     <div
-      className="flex items-center justify-center w-full fixed z-[10000]"
+      className="floating-dock flex items-center justify-center w-full fixed z-[10000]"
       style={{ top: `${topOffset}px` }}
     >
       <FloatingDock mobileClassName="translate-y-20" items={links} />
