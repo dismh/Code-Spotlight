@@ -81,7 +81,21 @@ export default function FloatingDockDemo() {
           alt="Aceternity Logo"
         />
       ),
-      href: "#Random",
+      // 🚀 instead of href, we give it an onClick
+      onClick: () => {
+        const projects = [
+          "/decram",
+          "/devkrit",
+          "/Five",
+          "/Three",
+          "/Seven",
+          "/Six",
+          "/Aarnav",
+        ];
+        const randomPath =
+          projects[Math.floor(Math.random() * projects.length)];
+        router.push(randomPath);
+      },
     },
     {
       title: "Contributors",

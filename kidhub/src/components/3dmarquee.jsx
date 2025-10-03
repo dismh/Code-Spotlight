@@ -182,7 +182,7 @@ export function ThreeDMarqueeDemoSecond() {
       </p>
       <div className="relative z-20 flex flex-wrap items-center justify-center gap-4 pt-4">
         <button className="rounded-md bg-sky-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
-          Explore Projects
+          <a href="#Websites">Explore Projects</a>
         </button>
         <button
           onClick={openRandom}

@@ -27,6 +27,7 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen">
+      <Navbar />
       {isLoading ? (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black text-white">
           <Loader />
@@ -35,7 +36,7 @@ export default function Home() {
         showContent && (
           <>
             <ThreeDMarqueeDemoSecond />
-            <Navbar />
+            {/* < /> */}
             <div
               id="Websites"
               className="min-h-screen px-4 py-5 bg-black text-white"
@@ -56,38 +57,43 @@ export default function Home() {
                   title="Devkrit, Maninder and Ajeet"
                   description="A student website showcasing school days and favourite sports."
                   link="\devkrit"
-                  img="/assets/dev.png"
+                  img="/assets/devkrit.png"
                   linkName="View"
                 />
                 <AnimatedPinCard
                   title="Ayush"
                   description="Project about school life and favourite sports."
                   link="\Five"
-                  img="/assets/ay.png"
+                  img="/assets/ayush.png"
+                  linkName="View"
                 />
-                 <AnimatedPinCard
+                <AnimatedPinCard
                   title="Varnav"
                   description="Project about school life."
                   link="\Three"
-                  img="/assets/three.png"
+                  img="/assets/varnav.png"
+                  linkName="View"
                 />
                 <AnimatedPinCard
                   title="Dhruv & Sameer"
                   description="Project about each  other's interests and hobbies."
                   link="\Seven"
-                  img="/assets/seven.png"
+                  img="/assets/dhruv.png"
+                  linkName="View"
                 />
                 <AnimatedPinCard
                   title="Mehtab"
                   description="Project about himself."
                   link="\Six"
-                  img="/assets/seix.png"
+                  img="/assets/mehtab.png"
+                  linkName="View"
                 />
                 <AnimatedPinCard
-                  title="Aarnav"
+                  title="Aarav and Jaskaran"
                   description="Project about his school hobbies."
                   link="\Aarnav"
-                  img="/assets/Aar.png"
+                  img="/assets/Aarav.png"
+                  linkName="View"
                 />
               </div>
             </div>
