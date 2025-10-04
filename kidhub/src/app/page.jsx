@@ -46,57 +46,64 @@ export default function Home() {
                 <a href="#Websites">Our Projects</a>
               </h1>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 sm:gap-x-4 sm:gap-y-4 lg:gap-x-8 justify-items-center px-2 sm:px-0">
-                <AnimatedPinCard
-                  title="DeCram AI"
-                  description="An AI-powered platform tailored for students to upskill their academics."
-                  link="\decram"
-                  img="/assets/Decram.jpg"
-                  linkName="View"
-                />
-                <AnimatedPinCard
-                  title="Devkrit, Maninder and Ajeet"
-                  description="A student website showcasing school days and favourite sports."
-                  link="\devkrit"
-                  img="/assets/devkrit.png"
-                  linkName="View"
-                />
-                <AnimatedPinCard
-                  title="Ayush"
-                  description="Project about school life and favourite sports."
-                  link="\Five"
-                  img="/assets/ayush.png"
-                  linkName="View"
-                />
-                <AnimatedPinCard
-                  title="Varnav"
-                  description="Project about school life."
-                  link="\Three"
-                  img="/assets/varnav.png"
-                  linkName="View"
-                />
-                <AnimatedPinCard
-                  title="Dhruv & Sameer"
-                  description="Project about each other's interests and hobbies."
-                  link="\Seven"
-                  img="/assets/dhruv.png"
-                  linkName="View"
-                />
-                <AnimatedPinCard
-                  title="Mehtab"
-                  description="Project about himself."
-                  link="\Six"
-                  img="/assets/mehtab.png"
-                  linkName="View"
-                />
-                <AnimatedPinCard
-                  title="Aarav and Jaskaran"
-                  description="Project about his school hobbies."
-                  link="\Aarnav"
-                  img="/assets/aarav.png"
-                  linkName="View"
-                />
-              </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 sm:gap-x-4 sm:gap-y-2 lg:gap-x-8 justify-items-center px-2 sm:px-0">
+  <AnimatedPinCard
+    title="DeCram AI"
+    description="An AI-powered platform tailored for students to upskill their academics."
+    link="\decram"
+    img="/assets/Decram.jpg"
+    linkName="View"
+  />
+  <AnimatedPinCard
+    title="CritX"
+    description="short quiz to reveal your unique combination of Ojas, Tejas, and Prāṇa."
+    link="\critix"
+    img="/assets/tmkc.png"
+    linkName="View"
+  />
+  <AnimatedPinCard
+    title="Devkrit, Maninder and Ajeet"
+    description="A student website showcasing school days and favourite sports."
+    link="\devkrit"
+    img="/assets/devkrit.png"
+    linkName="View"
+  />
+  <AnimatedPinCard
+    title="Ayush"
+    description="Project about school life and favourite sports."
+    link="\Five"
+    img="/assets/ayush.png"
+    linkName="View"
+  />
+  <AnimatedPinCard
+    title="Varnav"
+    description="Project about school life."
+    link="\Three"
+    img="/assets/varnav.png"
+    linkName="View"
+  />
+  <AnimatedPinCard
+    title="Dhruv & Sameer"
+    description="Project about each other's interests and hobbies."
+    link="\Seven"
+    img="/assets/dhruv.png"
+    linkName="View"
+  />
+  <AnimatedPinCard
+    title="Mehtab"
+    description="Project about himself."
+    link="\Six"
+    img="/assets/mehtab.png"
+    linkName="View"
+  />
+  <AnimatedPinCard
+    title="Aarav and Jaskaran"
+    description="Project about his school hobbies."
+    link="\Aarnav"
+    img="/assets/aarav.png"
+    linkName="View"
+  />
+</div>
             </div>
             <div
               id="Contributors"
