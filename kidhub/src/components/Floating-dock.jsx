@@ -1,8 +1,4 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
+// Floating-dock.jsx
 "use client";
 
 import { cn } from "@/lib/utils";
@@ -33,44 +29,57 @@ const FloatingDockMobile = ({ items, className }) => {
       <AnimatePresence>
         {open && (
           <motion.div
-            layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "100%" }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="fixed inset-x-0 bottom-0 z-50 flex h-screen flex-col items-center justify-center bg-black/50 backdrop-blur-sm px-4"
           >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <a
-                  href={item.href}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ delay: 0.1 }}
+              className="flex flex-col items-center gap-6 bg-gray-50 dark:bg-neutral-900 rounded-2xl p-6 max-w-sm w-full max-h-[80vh] overflow-y-auto"
+            >
+              {items.map((item, idx) => (
+                <motion.a
                   key={item.title}
-                  onClick={item.onClick}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{
+                    opacity: 1,
+                    y: 0,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    y: 20,
+                  }}
+                  transition={{ delay: idx * 0.05 }}
+                  href={item.href}
+                  onClick={(e) => {
+                    item.onClick?.(e);
+                    setOpen(false);
+                  }}
+                  className="flex h-14 w-14 items-center justify-center rounded-full bg-white dark:bg-neutral-800 shadow-lg hover:scale-105 transition-transform"
                 >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </a>
-              </motion.div>
-            ))}
+                  <div className="h-6 w-6">{item.icon}</div>
+                </motion.a>
+              ))}
+              <button
+                onClick={() => setOpen(false)}
+                className="mt-4 text-sm text-neutral-500 hover:text-neutral-700"
+              >
+                Close
+              </button>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+        className="fixed top-6 right-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800 shadow-lg md:hidden z-40"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
+        <IconLayoutNavbarCollapse className="h-6 w-6 text-neutral-500 dark:text-neutral-400" />
       </button>
     </div>
   );
@@ -83,7 +92,7 @@ const FloatingDockDesktop = ({ items, className }) => {
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-gray-50 px-4 pb-3 md:flex dark:bg-neutral-900",
+        "mx-auto hidden h-16 items-end gap-2 sm:gap-4 rounded-2xl bg-gray-50 px-2 sm:px-4 pb-2 sm:pb-3 md:flex dark:bg-neutral-900",
         className
       )}
     >
