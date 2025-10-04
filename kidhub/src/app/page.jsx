@@ -93,7 +93,7 @@ export default function Home() {
                   title="Aarav and Jaskaran"
                   description="Project about his school hobbies."
                   link="\Aarnav"
-                  img="/assets/Aarav.png"
+                  img="/assets/aarav.png"
                   linkName="View"
                 />
               </div>
