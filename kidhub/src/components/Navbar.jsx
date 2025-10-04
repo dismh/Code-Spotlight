@@ -15,7 +15,7 @@ import {
 
 export default function FloatingDockDemo() {
   // Adjustable top offset in pixels
-  const topOffset = 20; // Reduced for better visibility
+  const topOffset = 60; // Reduced for better visibility
   const router = useRouter();
   const pathname = usePathname();
 
