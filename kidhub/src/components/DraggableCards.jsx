@@ -1,3 +1,4 @@
+// DraggableCards.jsx
 "use client";
 import { cn } from "@/lib/utils";
 import React, { useRef, useState, useEffect } from "react";
@@ -157,7 +158,7 @@ export const DraggableCardBody = ({ className, children }) => {
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "relative min-h-96 w-80 overflow-hidden rounded-md bg-neutral-100 p-6 shadow-2xl transform-3d dark:bg-neutral-900",
+        "relative min-h-[20rem] sm:min-h-64 md:min-h-80 lg:min-h-96 w-48 sm:w-64 md:w-80 overflow-hidden rounded-md bg-neutral-100 p-2 sm:p-4 md:p-6 shadow-2xl transform-3d dark:bg-neutral-900",
         className
       )}
     >
@@ -183,78 +184,78 @@ export function DraggableCardDemo() {
     {
       title: "Abhay",
       image: "/bacche/abue.jpg",
-      className: "absolute top-10 left-[15%] rotate-[-5deg]",
+      className: "absolute top-4 sm:top-10 left-[5%] sm:left-[15%] rotate-[-5deg]",
     },
     {
       title: "Shaurya",
       image: "/bacche/shawarma.jpg",
-      className: "absolute top-32 left-[25%] rotate-[-7deg]",
+      className: "absolute top-16 sm:top-32 left-[10%] sm:left-[25%] rotate-[-7deg]",
     },
     {
       title: "Amaan",
       image: "/bacche/anaam.jpg",
-      className: "absolute top-16 left-[40%] rotate-[8deg]",
+      className: "absolute top-8 sm:top-16 left-[20%] sm:left-[40%] rotate-[8deg]",
     },
     {
       title: "Gurshan",
       image: "/bacche/gurshan.jpg",
-      className: "absolute top-40 left-[55%] rotate-[10deg]",
+      className: "absolute top-20 sm:top-40 left-[30%] sm:left-[55%] rotate-[10deg]",
     },
     {
       title: "Maninder",
       image: "/bacche/maninder.jpg",
-      className: "absolute top-24 left-[70%] rotate-[2deg]",
+      className: "absolute top-12 sm:top-24 left-[40%] sm:left-[70%] rotate-[2deg]",
     },
     {
       title: "Devkrit",
       image: "/bacche/devkrit.jpg",
-      className: "absolute top-10 left-[5%] rotate-[-3deg]",
+      className: "absolute top-4 sm:top-10 left-[0%] sm:left-[5%] rotate-[-3deg]",
     },
     {
       title: "Arihant",
       image: "/bacche/arihant.jpg",
-      className: "absolute top-48 left-[20%] rotate-[6deg]",
+      className: "absolute top-24 sm:top-48 left-[15%] sm:left-[20%] rotate-[6deg]",
     },
     {
       title: "Person1",
       image: "/bacche/her.jpg",
-      className: "absolute top-28 left-[35%] rotate-[-4deg]",
+      className: "absolute top-14 sm:top-28 left-[25%] sm:left-[35%] rotate-[-4deg]",
     },
     {
       title: "Person2",
       image: "/bacche/him.jpg",
-      className: "absolute top-52 left-[50%] rotate-[3deg]",
+      className: "absolute top-26 sm:top-52 left-[35%] sm:left-[50%] rotate-[3deg]",
     },
     {
       title: "Person 3",
       image: "/bacche/karam1.jpg",
-      className: "absolute top-20 left-[65%] rotate-[-6deg]",
+      className: "absolute top-10 sm:top-20 left-[45%] sm:left-[65%] rotate-[-6deg]",
     },
     {
       title: "Person 4",
       image: "/bacche/karam2.jpg",
-      className: "absolute top-44 left-[75%] rotate-[5deg]",
+      className: "absolute top-22 sm:top-44 left-[55%] sm:left-[75%] rotate-[5deg]",
     },
     {
       title: "Person 5",
       image: "/bacche/them.jpg",
-      className: "absolute top-60 left-[10%] rotate-[7deg]",
+      className: "absolute top-30 sm:top-60 left-[5%] sm:left-[10%] rotate-[7deg]",
     },
     {
       title: "Person 6",
       image: "/bacche/they.jpg",
-      className: "absolute top-72 left-[30%] rotate-[-2deg]",
+      className: "absolute top-36 sm:top-72 left-[20%] sm:left-[30%] rotate-[-2deg]",
     },
     {
       title: "Person 7",
       image: "/bacche/yes.jpg",
-      className: "absolute top-64 left-[55%] rotate-[4deg]",
+      className: "absolute top-32 sm:top-64 left-[45%] sm:left-[55%] rotate-[4deg]",
     },
   ];
 
   return (
-    <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip">
-      <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-2xl font-black text-neutral-400 md:text-4xl dark:text-neutral-800">
+    <DraggableCardContainer className="relative flex min-h-screen w-full items-center justify-center overflow-clip px-2 sm:px-4">
+      <p className="absolute top-1/2 mx-auto max-w-sm -translate-y-3/4 text-center text-lg sm:text-2xl md:text-4xl font-black text-neutral-400 md:text-neutral-800 px-2">
         Special thanks to our contributors for making this project possible!
       </p>
       {items.map((item) => (
@@ -262,9 +263,9 @@ export function DraggableCardDemo() {
           <img
             src={item.image}
             alt={item.title}
-            className="pointer-events-none relative z-10 h-80 w-80 object-cover"
+            className="pointer-events-none relative z-10 h-48 sm:h-64 md:h-80 w-48 sm:w-64 md:w-80 object-cover"
           />
-          <h3 className="mt-4 text-center text-2xl font-bold text-neutral-700 dark:text-neutral-300">
+          <h3 className="mt-2 sm:mt-4 text-center text-xl sm:text-2xl font-bold text-neutral-700 dark:text-neutral-300">
             {item.title}
           </h3>
         </DraggableCardBody>

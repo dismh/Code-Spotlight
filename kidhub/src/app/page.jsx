@@ -1,3 +1,4 @@
+// page.jsx
 "use client";
 
 import { useState, useEffect } from "react";
@@ -39,13 +40,13 @@ export default function Home() {
             {/* < /> */}
             <div
               id="Websites"
-              className="min-h-screen px-4 py-5 bg-black text-white"
+              className="min-h-screen px-2 sm:px-4 py-5 bg-black text-white"
             >
-              <h1 className="text-5xl font-bold mb-8 text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-8 text-center">
                 <a href="#Websites">Our Projects</a>
               </h1>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 justify-items-center">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-2 sm:gap-x-4 sm:gap-y-4 lg:gap-x-8 justify-items-center px-2 sm:px-0">
                 <AnimatedPinCard
                   title="DeCram AI"
                   description="An AI-powered platform tailored for students to upskill their academics."
@@ -76,7 +77,7 @@ export default function Home() {
                 />
                 <AnimatedPinCard
                   title="Dhruv & Sameer"
-                  description="Project about each  other's interests and hobbies."
+                  description="Project about each other's interests and hobbies."
                   link="\Seven"
                   img="/assets/dhruv.png"
                   linkName="View"
@@ -101,7 +102,7 @@ export default function Home() {
               id="Contributors"
               className="w-full flex items-start justify-center pt-2 pb-10 relative overflow-hidden bg-black"
             >
-              <h1 className="text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans">
+              <h1 className="text-xl sm:text-2xl md:text-5xl lg:text-7xl font-bold text-center text-white relative z-2 font-sans px-4">
                 Our resourceful
                 <ColourfulText text=" Contributors" /> <br />
               </h1>
@@ -110,7 +111,7 @@ export default function Home() {
             <HighlightPage />
             <footer
               id="Footer"
-              className="bg-black text-white py-8 text-center"
+              className="bg-black text-white py-8 text-center px-4"
             >
               <p>Developed with ❤️ by Dexibility Productions</p>
             </footer>

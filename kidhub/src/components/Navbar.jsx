@@ -1,7 +1,8 @@
+// Navbar.jsx
 "use client";
 
 import React, { useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { FloatingDock } from "@/components/Floating-dock";
 import {
   IconBrandGithub,
@@ -14,8 +15,9 @@ import {
 
 export default function FloatingDockDemo() {
   // Adjustable top offset in pixels
-  const topOffset = 50;
+  const topOffset = 20; // Reduced for better visibility
   const router = useRouter();
+  const pathname = usePathname();
 
   const useOpenRandom = () => {
     return () => {
@@ -65,7 +67,7 @@ export default function FloatingDockDemo() {
     };
   }, [openRandom]);
 
-  const links = [
+  const allLinks = [
     {
       title: "Home",
       icon: (
@@ -84,9 +86,9 @@ export default function FloatingDockDemo() {
       title: "Random Website!",
       icon: (
         <img
-          src="https://assets.aceternity.com/logo-dark.png"
-          width={20}
-          height={20}
+          src="https://i.ibb.co/MDCXTHnd/paper-box-computer-icons-symbol-random-icons-thumbnail-removebg-preview.png"
+          width={50}
+          height={50}
           alt="Aceternity Logo"
         />
       ),
@@ -111,13 +113,16 @@ export default function FloatingDockDemo() {
       href: "#Footer",
     },
   ];
+
+  const links = pathname === '/' ? allLinks : [allLinks[0]];
+
   // hello
   return (
     <div
-      className="floating-dock flex items-center justify-center w-full fixed z-[10000]"
+      className="floating-dock flex items-center justify-center w-full fixed z-[10000] px-2 sm:px-4"
       style={{ top: `${topOffset}px` }}
     >
-      <FloatingDock mobileClassName="translate-y-20" items={links} />
+      <FloatingDock desktopClassName="" mobileClassName="" items={links} />
     </div>
   );
 }

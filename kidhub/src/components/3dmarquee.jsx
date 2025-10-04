@@ -1,3 +1,4 @@
+// 3dmarquee.jsx
 "use client";
 
 import { motion } from "framer-motion";
@@ -19,12 +20,12 @@ export const ThreeDMarquee = ({ images, className }) => {
       )}
     >
       <div className="flex w-full h-full items-center justify-center">
-        <div className="w-[90vw] h-[90vh] shrink-0 scale-[0.4] sm:scale-[0.6] md:scale-[0.8] lg:scale-[1]">
+        <div className="w-[90vw] h-[90vh] shrink-0 scale-[1] sm:scale-[0.9] md:scale-[0.8] lg:scale-[0.7] xl:scale-[0.6]">
           <div
             style={{
               transform: "rotateX(55deg) rotateY(0deg) rotateZ(-45deg)",
             }}
-            className="relative top-[50vh] right-[50%] grid w-full h-full origin-top-left grid-cols-4 gap-4 md:gap-8 transform-3d"
+            className="relative top-[50vh] right-[50%] grid w-full h-full origin-top-left grid-cols-4 gap-2 xs:gap-4 sm:gap-6 md:gap-8 transform-3d"
           >
             {chunks.map((subarray, colIndex) => (
               <motion.div
@@ -35,7 +36,7 @@ export const ThreeDMarquee = ({ images, className }) => {
                   repeatType: "reverse",
                 }}
                 key={colIndex + "marquee"}
-                className="flex flex-col items-start gap-4 md:gap-8"
+                className="flex flex-col items-start gap-2 xs:gap-4 sm:gap-6 md:gap-8"
               >
                 <GridLineVertical className="-left-4" offset="80px" />
                 {subarray.map((image, imageIndex) => (
@@ -179,24 +180,24 @@ export function ThreeDMarqueeDemoSecond() {
   const openRandom = useOpenRandom(); // 👈 hook call
 
   return (
-    <div className="relative w-screen h-screen min-h-screen flex flex-col items-center justify-center overflow-hidden rounded-none">
-      <h2 className="relative z-20 mx-auto max-w-4xl text-center text-2xl font-bold text-balance text-white md:text-4xl lg:text-6xl">
+    <div className="relative w-screen h-screen min-h-screen flex flex-col items-center justify-center overflow-hidden rounded-none px-2 sm:px-4">
+      <h2 className="relative z-20 mx-auto max-w-4xl text-center text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-balance text-white px-2">
         Not just students. Young creators of the{" "}
-        <span className="relative z-20 inline-block rounded-xl bg-blue-500/40 px-4 py-1 text-white underline decoration-sky-500 decoration-[6px] underline-offset-[16px] backdrop-blur-sm">
+        <span className="relative z-20 inline-block rounded-xl bg-blue-500/40 px-2 sm:px-4 py-1 text-white underline decoration-sky-500 decoration-[3px] sm:decoration-[6px] underline-offset-[8px] sm:underline-offset-[16px] backdrop-blur-sm">
           Future.
         </span>{" "}
       </h2>
-      <p className="relative z-20 mx-auto max-w-2xl py-8 text-center text-sm text-neutral-200 md:text-base">
+      <p className="relative z-20 mx-auto max-w-2xl py-8 text-center text-xs xs:text-sm sm:text-base text-neutral-200 px-2">
         KidHub is a canvas for schoolkids — where stories, science, poems, and
         passion come alive. It’s not about marks. It’s about meaning.
       </p>
-      <div className="relative z-20 flex flex-wrap items-center justify-center gap-4 pt-4">
-        <button className="rounded-md bg-sky-600 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-black focus:outline-none">
+      <div className="relative z-20 flex flex-wrap items-center justify-center gap-2 sm:gap-4 pt-4 px-2">
+        <button className="rounded-md bg-sky-600 px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium text-white transition-colors hover:bg-sky-700 focus:ring-2 focus:ring-sky-500 focus:ring-offset-2 focus:ring-offset-black focus:outline-none w-full sm:w-auto">
           <a href="#Websites">Explore Projects</a>
         </button>
         <button
           onClick={openRandom}
-          className="rounded-md border border-white/20 bg-white/10 px-6 py-2.5 text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/50 focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black focus:outline-none"
+          className="rounded-md border border-white/20 bg-white/10 px-4 sm:px-6 py-2 text-xs sm:text-sm font-medium text-white backdrop-blur-sm transition-colors hover:bg-white/50 focus:ring-2 focus:ring-white/20 focus:ring-offset-2 focus:ring-offset-black focus:outline-none w-full sm:w-auto"
         >
           Open random project
         </button>
